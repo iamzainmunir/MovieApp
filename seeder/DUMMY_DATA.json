@@ -1,0 +1,65 @@
+{
+    "user": {
+        "name": "User One",
+        "email": "example1@gmail.com",
+        "password": "password"
+    },
+    "movies": [
+        {
+            "name": "Harry Potter and the Philosopher's Stone",
+            "description": "Harry Potter and the Philosopher's Stone (released in the United States, India and the Philippines as Harry Potter and the Sorcerer's Stone) is a 2001 fantasy film directed by Chris Columbus and distributed by Warner Bros. Pictures, based on J. K. Rowling's 1997 novel of the same name. Produced by David Heyman and screenplay by Steve Kloves, it is the first instalment of the Harry Potter film series. The film stars Daniel Radcliffe as Harry Potter, with Rupert Grint as Ron Weasley, and Emma Watson as Hermione Granger. Its story follows Harry's first year at Hogwarts School of Witchcraft and Wizardry as he discovers that he is a famous wizard and begins his formal wizarding education",
+            "releaseDate": "2001-11-14",
+            "rating": 5,
+            "ticketPrice": 200,
+            "country": "Pakistan",
+            "genre": [
+                "fantasy",
+                "adventure"
+            ],
+            "photo": "https://picsum.photos/200/300",
+            "slug": "harry-potter-and-the-philosopher's-stone"
+        },
+        {
+            "name": "Pirates of the Caribbean",
+            "description": "Pirates of the Caribbean: The Curse of the Black Pearl is a 2003 American fantasy swashbuckler film directed by Gore Verbinski and the first film in the Pirates of the Caribbean film series. Produced by Walt Disney Pictures and Jerry Bruckheimer, the film is based on Walt Disney's Pirates of the Caribbean attraction at Disney theme parks.[3] The story follows pirate Jack Sparrow (Johnny Depp) and blacksmith Will Turner (Orlando Bloom) as they rescue the kidnapped Elizabeth Swann (Keira Knightley) from the cursed crew of the Black Pearl",
+            "releaseDate": "2003-06-28",
+            "rating": 5,
+            "ticketPrice": 200,
+            "country": "Pakistan",
+            "genre": [
+                "action",
+                "comedy",
+                "fantasy",
+                "adventure"
+            ],
+            "photo": "https://picsum.photos/200/300",
+            "slug": "pirates-of-the-caribbean"
+        },
+        {
+            "name": "The Fast and the Furious",
+            "description": "The Fast and the Furious is a 2001 action film directed by Rob Cohen from a screenplay by Gary Scott Thompson, David Ayer, and Erik Bergquist, from a story by Thompson. It is the first installment in the Fast & Furious franchise, and stars Paul Walker as Brian O'Conner and Vin Diesel as Dominic Toretto, with Michelle Rodriguez and Jordana Brewster in supporting roles",
+            "releaseDate": "2001-06-22",
+            "rating": 5,
+            "ticketPrice": 200,
+            "country": "Pakistan",
+            "genre": [
+                "crime film",
+                "thriller",
+                "adventure"
+            ],
+            "photo": "https://picsum.photos/200/300",
+            "slug": "the-fast-and-the-furious"
+        }
+    ],
+    "comments": [
+        {
+            "comment": "Best childhood movie"
+        },
+        {
+            "comment": "Best action movie"
+        },
+        {
+            "comment": "Best thriller movie"
+        }
+    ]
+}
