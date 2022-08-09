@@ -22,6 +22,7 @@ export default class FilmFetchController {
                 }
             }
 
+            // Removed pagination beacuse I'm handling multiple movies using slider in frontend
             let page = Number(validate.value.page ? validate.value.page : 1),
                 limit = Number(validate.value.limit ? validate.value.limit : 1);
             let skip = (page * limit) - limit;

@@ -63,9 +63,11 @@ export default class FilmCreateController {
                 }
             }
 
+            // Generate unique movie slug
             const slug = slugify(validate.value.name, { lower: true })
             validate.value.slug = slug;
 
+            // Throw error if this slug is already exists
             const film = await FilmModel.findOne({ slug: slug })
             if(film){
                 return res.status(403).send({
