@@ -5,54 +5,109 @@ module.exports = {
                 summary: "It will create movie",
                 description: "It will create movie",
                 operationId: "create_film",
-                consumes: ["application/json"],
-                produces: ["application/json"],
+                consumes: ['multipart/form-data'],
+                produces: ['multipart/form-data'],
                 parameters: [
                     {
-                        in: "body",
-                        name: "body",
-                        description: "Send Message",
-                        required: true,
-                        schema: {
-                        type: "object",
-                        properties: {
-                                name: {
-                                    type: "string",
-                                    example: "Movie name"
-                                },
-                                description: {
-                                    type: "string",
-                                    example: "Movie description"
-                                },
-                                releaseDate: {
-                                    type: "date",
-                                    example: "2022-01-23"
-                                },
-                                rating: {
-                                    type: "number",
-                                    description: "Rating from 1 to 5",
-                                    example: 4
-                                },
-                                ticketPrice: {
-                                    type: "number",
-                                    description: "Price must be greater than 0",
-                                    example: 4
-                                },
-                                country: {
-                                    type: "string",
-                                    example: "Pakistan"
-                                },
-                                genre: {
-                                    type: "array",
-                                    example: ["action", "drama"]
-                                },
-                                photo: {
-                                    type: "string",
-                                    example: "Image url"
-                                }
-                            }
-                        }
-                    }
+                        in: "formData",
+                        name: "name",
+                        type: "text",
+                        example: "Harry potter",
+                        description: "Movie name"
+                    },
+                    {
+                        in: "formData",
+                        name: "description",
+                        type: "text",
+                        example: "Best fantasy movie",
+                        description: "Movie description"
+                    },
+                    {
+                        in: "formData",
+                        name: "releaseDate",
+                        type: "text",
+                        example: "2022-01-01",
+                        description: "Release date of movie"
+                    },
+                    {
+                        in: "formData",
+                        name: "rating",
+                        type: "text",
+                        example: 5,
+                        description: "Movie ratings out of 5"
+                    },
+                    {
+                        in: "formData",
+                        name: "ticketPrice",
+                        type: "text",
+                        example: 500,
+                        description: "Movie ticket price"
+                    },
+                    {
+                        in: "formData",
+                        name: "country",
+                        type: "text",
+                        example: "Pakistan",
+                        description: "Country name"
+                    },
+                    {
+                        in: "formData",
+                        name: "genre",
+                        type: "text",
+                        example: ["fantasy", "adventure"],
+                        description: "Movie genre"
+                    },
+                    {
+                        in: "formData",
+                        name: "photo",
+                        type: "file",
+                        description: "Upload movie image"
+                    },
+                    // {
+                    //     in: "body",
+                    //     name: "body",
+                    //     description: "Send Message",
+                    //     required: true,
+                    //     schema: {
+                    //     type: "object",
+                    //     properties: {
+                    //             name: {
+                    //                 type: "string",
+                    //                 example: "Movie name"
+                    //             },
+                    //             description: {
+                    //                 type: "string",
+                    //                 example: "Movie description"
+                    //             },
+                    //             releaseDate: {
+                    //                 type: "date",
+                    //                 example: "2022-01-23"
+                    //             },
+                    //             rating: {
+                    //                 type: "number",
+                    //                 description: "Rating from 1 to 5",
+                    //                 example: 4
+                    //             },
+                    //             ticketPrice: {
+                    //                 type: "number",
+                    //                 description: "Price must be greater than 0",
+                    //                 example: 4
+                    //             },
+                    //             country: {
+                    //                 type: "string",
+                    //                 example: "Pakistan"
+                    //             },
+                    //             genre: {
+                    //                 type: "array",
+                    //                 example: ["action", "drama"]
+                    //             },
+                    //             photo: {
+                    //                 type: "string",
+                    //                 example: "Image url"
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 ],
                 responses: {
                     400: {

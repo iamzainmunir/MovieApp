@@ -1,9 +1,11 @@
 const userRegistrationNLogin = require("./users"),
-filmApis = require("./film")
+filmApis = require("./film"),
+commentApis = require("./comment")
 
 let apis = {
     ...userRegistrationNLogin,
-    ...filmApis
+    ...filmApis,
+    ...commentApis
 };
 
 let configurations = {

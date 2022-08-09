@@ -3,10 +3,31 @@ import errorHandler from '../../../common/handler/error.handler';
 import FilmModel from "../model/films.model"
 const Joi = require('joi').extend(require('@joi/date'));
 const slugify = require('slugify')
+import fs from "fs";
+require('dotenv').config();
+const cloudinary = require('cloudinary').v2
 
+interface IRequest extends Request {
+    file: any
+}
 export default class FilmCreateController {
-    public create = async (req: Request, res: Response) => {
+    public create = async (req: IRequest, res: Response) => {
         try {
+            // Image image on cloudinary
+            const uploadImage = await cloudinary.uploader.upload(req.file.path);
+            if(uploadImage){
+                // After uploading image on cloudinary, delete image from local storage
+                fs.unlink("uploads/" + `${req.file.filename}`, (err) => {
+                    if (err) {
+                      console.log("file couldn't removed")
+                    }
+                })
+            }
+
+            // Store image url on body.
+            req.body.photo = uploadImage.secure_url;
+            req.body.genre = req.body.genre.split(",")
+            
             const schema = Joi.object().keys({
                 name: Joi.string().regex(/^[a-zA-Z0-9'][a-zA-Z0-9' ]+$/).min(4).max(80).required().messages({
                     "string.min": "Must have at least 4 characters",
@@ -35,7 +56,6 @@ export default class FilmCreateController {
                 }
             }
 
-            
             const slug = slugify(validate.value.name, { lower: true })
             validate.value.slug = slug;
 
@@ -50,6 +70,7 @@ export default class FilmCreateController {
 
             return res.status(200).send({
                 success: true,
+                message: "Movie added successfully",
                 data: add_film
             })
 

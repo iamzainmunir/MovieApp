@@ -24,6 +24,7 @@ export default class FilmFetchBySlugController {
 
             return res.status(200).send({
                 success: true,
+                message: "Movie fetched successfully",
                 data: film
             })
             
