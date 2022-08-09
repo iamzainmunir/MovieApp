@@ -17,10 +17,10 @@ export default class CommentsCreateController {
             const schema = Joi.object().keys({
                 comment: Joi.string().required().min(1),
                 user_id: Joi.objectId().required(),
-                ref_id: Joi.objectId().required()
+                ref: Joi.objectId().required()
             });
 
-            const validate: any = schema.validate(req.params);
+            const validate: any = schema.validate(req.body);
             if(validate.error) {
                 throw {
                     status: 400,

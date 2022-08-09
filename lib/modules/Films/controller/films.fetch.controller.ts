@@ -33,7 +33,7 @@ export default class FilmFetchController {
                 limit: limit
             };
 
-            const film_list: any = await FilmModel.find({ isDeleted: false }, {}, pagination)
+            const film_list: any = await FilmModel.find({ isDeleted: false })
             const count = await FilmModel.countDocuments({ isDeleted: false })
 
             // Fetch comments and user info
@@ -66,6 +66,7 @@ export default class FilmFetchController {
                 } else {
                     comment_info[comment.ref.toString()].push({
                         comment: comment.comment,
+                        date: comment.updatedAt,
                         name: user_info[comment.user_id].name
                     })
                 }

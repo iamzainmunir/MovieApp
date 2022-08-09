@@ -13,6 +13,13 @@ interface IRequest extends Request {
 export default class FilmCreateController {
     public create = async (req: IRequest, res: Response) => {
         try {
+            if(!req.file || !req.file.path){
+                return res.status(400).send({
+                    success: false,
+                    message: "Movie image cannot be empty"
+                })
+            }
+
             // Image image on cloudinary
             const uploadImage = await cloudinary.uploader.upload(req.file.path);
             if(uploadImage){
