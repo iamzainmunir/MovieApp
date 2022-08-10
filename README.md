@@ -4,7 +4,7 @@
 - PORT                  (Port to run server)
 - DATABASE              (Mongodb database url)
 - JWT_SECRET            (Any secret key to generate jwt token)
-- CLIENT_SIDE_BASE_URL  (Base url of frontend)
+- CLOUDINARY_URL        (Cloudinary url to store images)
 
 * After setup env file, run these commands
 - yarn install
