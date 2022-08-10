@@ -126,18 +126,18 @@ module.exports = {
                 consumes: ["application/json"],
                 produces: ["application/json"],
                 parameters: [
-                    {
-                        in: "query",
-                        name: "page",
-                        schema: { type: "string", example: "1" },
-                        description: "Fetch movies"
-                    },
-                    {
-                        in: "query",
-                        name: "limit",
-                        schema: { type: "string", example: "10" },
-                        description: "Fetch movies per page limit"
-                    }
+                    // {
+                    //     in: "query",
+                    //     name: "page",
+                    //     schema: { type: "string", example: "1" },
+                    //     description: "Fetch movies"
+                    // },
+                    // {
+                    //     in: "query",
+                    //     name: "limit",
+                    //     schema: { type: "string", example: "10" },
+                    //     description: "Fetch movies per page limit"
+                    // }
                 ],
                 responses: {
                     400: {

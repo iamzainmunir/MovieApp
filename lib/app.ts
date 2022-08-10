@@ -35,6 +35,9 @@ class App {
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
     this.app.use(cors())
+    this.app.get("/", (req, res) =>  {
+      res.redirect('/api-docs')
+    })
   }
 
   private mongoSetup (): void {
