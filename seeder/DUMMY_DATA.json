@@ -1,6 +1,6 @@
 {
     "user": {
-        "name": "User One",
+        "name": "Zain Munir",
         "email": "example1@gmail.com",
         "password": "password"
     },
@@ -16,7 +16,7 @@
                 "fantasy",
                 "adventure"
             ],
-            "photo": "https://picsum.photos/200/300",
+            "photo": "https://res.cloudinary.com/djtyi9u3e/image/upload/v1660121786/harry_potter_sgj1sn.jpg",
             "slug": "harry-potter-and-the-philosopher's-stone"
         },
         {
@@ -32,7 +32,7 @@
                 "fantasy",
                 "adventure"
             ],
-            "photo": "https://picsum.photos/200/300",
+            "photo": "https://res.cloudinary.com/djtyi9u3e/image/upload/v1660121851/pirates_of_carribian_buirvq.jpg",
             "slug": "pirates-of-the-caribbean"
         },
         {
@@ -47,19 +47,19 @@
                 "thriller",
                 "adventure"
             ],
-            "photo": "https://picsum.photos/200/300",
+            "photo": "https://res.cloudinary.com/djtyi9u3e/image/upload/v1660121940/fast_and_furious_w049bi.jpg",
             "slug": "the-fast-and-the-furious"
         }
     ],
     "comments": [
         {
-            "comment": "Best childhood movie"
+            "comment": "I can honestly say from the bottom of my heart, with every ounce of my being, that the Harry Potter books are among some of the most well-developed, thoroughly planned, terrifically intriguing, thought-provoking and meaningful books I have ever read. Honestly"
         },
         {
-            "comment": "Best action movie"
+            "comment": "Easily one of the best films of all time. Even after four more Pirates movies, this is still the superior entree in my opinion. I doubt there will ever be a more iconic role than Johnny Depp as Captain Jack Sparrow in this movie and he should've won that Oscar! "
         },
         {
-            "comment": "Best thriller movie"
+            "comment": "Amazing non-stop action. Director Justin Lin shows us how to make spectacular action flick. This may be a 2009 film but it certainly beats many others of its genre that came after."
         }
     ]
 }
